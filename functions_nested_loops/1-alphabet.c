@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_alphabet - Fonction to print alphabet in lower case
+ *
+ */
+
 void print_alphabet(void)
 {
 	char alphabet;
@@ -8,6 +13,5 @@ void print_alphabet(void)
 	{
 		_putchar(alphabet);
 	}
-
-	return (0);
+	_putchar('\n');
 }
