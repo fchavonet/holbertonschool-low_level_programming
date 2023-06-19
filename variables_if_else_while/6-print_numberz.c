@@ -10,7 +10,7 @@ int main(void)
 {
 	/* Variable declaration, use of ASCII */
 	int numbers = 48;
-	
+
 	/* Print all number iclude 9 (57) */
 	for (; numbers <= 57 ; numbers++)
 	{
