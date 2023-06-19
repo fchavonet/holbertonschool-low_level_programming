@@ -8,15 +8,20 @@
 
 int main(void)
 {
-	char alphabet = 122;
+	int numbers = 0;
+	char letters = 0;
 
-	/* Displays alphabet in lower case (reverse) */
-	for (alphabet = 122 ; alphabet >= 97 ; alphabet--)
+	for (numbers = 48; numbers < 57 ; numbers++)
 	{
-		putchar(alphabet);
+		putchar(numbers);
+	}
+	for (letters = 'a' ; letters <= 'f' ; letters++)
+	{
+		putchar(letters);
 	}
 
 	/* New line at the end */
 	putchar('\n');
+
 	return (0);
 }
