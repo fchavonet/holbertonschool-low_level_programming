@@ -1,0 +1,58 @@
+#include "main.h"
+
+/**
+ * print_to_98 - prints all numbers from n to 98
+ * @n: is the starting number to go to 98
+ */
+
+void print_to_98(int n)
+{
+	if (n == 98)
+	{
+		_putchar('9');
+		_putchar('8');
+	}
+	else if (n < 98)
+	{
+		for (; n <= 98 ; n++)
+		{
+			if (n > 9)
+			{
+				_putchar((n / 10) + '0');
+			}
+			_putchar((n % 10) + '0');
+			if (n < 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			if (n < 0)
+			{
+				n = (n * -1);
+				_putchar('-');
+			}
+		}
+	}
+	else if (n > 98)
+	{
+		for (; n >= 98 ; n--)
+		{
+			if (n > 99)
+			{
+				_putchar((n / 100) + '0');
+				_putchar((n % 1) + '0');
+			}
+			if (n < 100)
+			{
+				_putchar((n / 10) + '0');
+			}
+			_putchar((n % 10) + '0');
+			if (n > 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
+	}
+	_putchar('\n');
+}
