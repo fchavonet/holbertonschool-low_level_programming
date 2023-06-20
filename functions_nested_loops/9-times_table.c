@@ -23,15 +23,15 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar('.');
+				_putchar(' ');
 			}
 
 			_putchar((x % 10) + '0');
 
-			if (b < 9)
+			if (b < 9) && (b > 0);
 			{
 				_putchar(',');
-				_putchar('.');
+				_putchar(' ');
 			}
 
 			if (b >= 9)
