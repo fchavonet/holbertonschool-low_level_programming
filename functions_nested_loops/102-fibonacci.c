@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - print the Fibonacci number until 50 items
+ *
+ * Return: Always 0 if programme is good
+ */
+
 int main(void)
 {
 	long a = 0;
@@ -15,7 +21,7 @@ int main(void)
 		if (i < 25)
 		{
 			printf(", ");
-		}		
+		}
 
 		b = a + b;
 		printf("%lu", b);
