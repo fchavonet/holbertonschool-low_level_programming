@@ -2,26 +2,28 @@
 
 int main(void)
 {
-	int a = 0;
-	int b = 1;
-	int r = 0;
+	long a = 0;
+	long b = 1;
 	int i = 0;
 
-
-	printf("%d, %d, ", a, b);
-
-	for (i = 0 ; i < 50 ; i++)
+	for (i = 0 ; i < 25 ; i++)
 	{
+		a = a + b;
 
-		r = a + b;
-		printf("%d, ", r);
+		printf("%lu", a);
 
-		a = r + b;
-		printf("%d, ", a);
+		if (i < 25)
+		{
+			printf(", ");
+		}		
 
-		b = r + a;
-		printf("%d, ", b);
+		b = a + b;
+		printf("%lu", b);
 
+		if (i < 24)
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
 
