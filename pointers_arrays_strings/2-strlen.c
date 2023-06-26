@@ -13,9 +13,11 @@ int _strlen(char *s)
 
 	int i = 0;
 
-	for (; s[i] != 0; i++)
+	while (i != \0 )
 	{
+		_putchar(s[i]);
+		i++
 	}
-	return (i);
+	_putchar('\n');
 
 }
