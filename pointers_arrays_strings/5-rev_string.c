@@ -18,13 +18,10 @@ void rev_string(char *s)
 		length++;
 	}
 
-	/* Après cette étape, length = 9 si s = My School */
-
 	for (a = 0, b = length - 1 ; a <= (length / 2) ; a++, b--)
 	{
 		temp = s[a];
 		s[a] = s[b];
 		s[b] = temp;
 	}
-	_putchar('\n');
 }
