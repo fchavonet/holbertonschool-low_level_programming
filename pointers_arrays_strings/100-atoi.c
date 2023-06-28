@@ -3,28 +3,26 @@
 
 /**
  * _atoi - convert a string to an integer
+ * 
  * @s: a rediger
+ *
+ * Return: result is final integer
  */
 
 int _atoi(char *s)
 {
-	int lenght = 0;
-	int sign = 0;
+	int index = 0;
 	int result = 0;
-	int final = 0;
 
-	while (s[lenght] != '\n')
+
+	while (s[index] != '\0')
 	{
-		lenght++;
+		if (s[index] >= '0' && s[index] <= '9')
+		{
+			result = result * 10 + s[index] - '0';
+		}
+		index++;
 	}
 
-	if ((s[lenght] == '+') || (s[lenght] == '-'))
-	{
-		sign = 1 - 2 * (s[lenght++] == '-') ;
-	}
-
-	final = sign * result;
-
-	return (final);
-
+	return (result);
 }
