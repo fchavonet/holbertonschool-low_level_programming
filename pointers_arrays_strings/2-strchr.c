@@ -1,5 +1,14 @@
 #include "main.h"
 
+/**
+ * _strchr - locates a character in a string
+ *
+ * @s: the string to check
+ * @c: the character to found
+ *
+ * Return: 0 (NULL) if no correspondence found
+ */
+
 char *_strchr(char *s, char c)
 {
 
