@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * cap_string - capitalize all words of the string
+ * @str: string to capitalize
+ * Return: the string after capitalize
  */
 
 char *cap_string(char *str)
@@ -16,18 +16,18 @@ char *cap_string(char *str)
 		{
 			if
 				((str[index - 1]) == ' ' ||
-				 (str[index -1]) == '\t' ||
-				 (str[index -1]) == '\n' ||
-				 (str[index -1]) == ',' ||
-				 (str[index -1]) == (';') ||
-				 (str[index -1]) == ('.') ||
-				 (str[index -1]) == '!' ||
-				 (str[index -1]) == '?' ||
-				 (str[index -1]) == '"' ||
-				 (str[index -1]) == '(' ||
-				 (str[index -1]) == ')' ||
-				 (str[index -1]) == '{' ||
-				 (str[index -1]) == ('}') ||
+				 (str[index - 1]) == '\t' ||
+				 (str[index - 1]) == '\n' ||
+				 (str[index - 1]) == ',' ||
+				 (str[index - 1]) == (';') ||
+				 (str[index - 1]) == ('.') ||
+				 (str[index - 1]) == '!' ||
+				 (str[index - 1]) == '?' ||
+				 (str[index - 1]) == '"' ||
+				 (str[index - 1]) == '(' ||
+				 (str[index - 1]) == ')' ||
+				 (str[index - 1]) == '{' ||
+				 (str[index - 1]) == ('}') ||
 				 (index == 0))
 				{
 					(str[index]) -= 32;
