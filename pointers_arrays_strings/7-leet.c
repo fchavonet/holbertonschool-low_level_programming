@@ -27,5 +27,5 @@ char *leet(char *s)
 		lenght++;
 	}
 
-	return (s);	
+	return (s);
 }
