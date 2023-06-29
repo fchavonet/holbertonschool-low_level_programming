@@ -12,6 +12,8 @@
 void print_diagsums(int *a, int size)
 {
 
+	/* test*/
+
 	int column = 0;
 	int row = 0;
 	int sum1 = 0;
