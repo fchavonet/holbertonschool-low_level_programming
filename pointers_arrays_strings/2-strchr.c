@@ -23,5 +23,10 @@ char *_strchr(char *s, char c)
 		index++;
 	}
 
+	if (s[index] != c)
+	{
+		return (0);
+	}
+
 	return (0);
 }
