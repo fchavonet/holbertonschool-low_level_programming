@@ -12,24 +12,37 @@ int main(int argc, char *argv[])
 	 * Return: 0 when the main fonction end
 	 */
 
-	int index = 0;
+	int index1 = 1;
+	int index2 = 0;
+
+	char *s;
+
 	int result = 0;
 
-	for (index = 1 ; index < argc ; index++)
+	while (index1 < argc)
 	{
+		s = argv[index1];
+		index2 = 0;
 
-		if (argv >= '0' && argv[index] <= '9')
+		while (s[index2] !='\0')
 		{
-
-			result = result + atoi(argv[index]);
+			if (s[index2] < '0' || s[index2] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			index2++;
 		}
-		else
-		{
-			return (0);
-		}
-
-		printf("%d\n", result);
-
-		return (0);
+		index1++;
 	}
+
+	for (index1 = 1 ; index1 < argc ; index1++)
+	{
+		result = result + atoi(argv[index1]);
+	
+	}
+
+	printf("%d\n", result);
+
+	return (0);
 }
