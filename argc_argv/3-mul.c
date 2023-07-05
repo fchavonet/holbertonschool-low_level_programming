@@ -15,10 +15,10 @@ int main(int argc, char *argv[])
 	if (argc == 3)
 	{
 
-		long  multi_a = atoi(argv[1]);
-		long  multi_b = atoi(argv[2]);
+		int  multi_a = atoi(argv[1]);
+		int  multi_b = atoi(argv[2]);
 
-		long result = 0;
+		int result = 0;
 
 		result = multi_a * multi_b;
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
 	else
 	{
-		printf("Error");
+		printf("Error\n");
 	}
 
 	return (0);
