@@ -15,10 +15,10 @@ int main(int argc, char *argv[])
 	if (argc == 3)
 	{
 
-		int  multi_a = atoi(argv[1]);
-		int  multi_b = atoi(argv[2]);
+		long  multi_a = atoi(argv[1]);
+		long  multi_b = atoi(argv[2]);
 
-		int result = 0;
+		long result = 0;
 
 		result = multi_a * multi_b;
 
