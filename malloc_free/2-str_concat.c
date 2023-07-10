@@ -25,10 +25,14 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	while (s1[size_s1] != '\0')
+	{
 		size_s1++;
+	}
 
 	while (s2[size_s2] != '\0')
+	{
 		size_s2++;
+	}
 
 	result = malloc((size_s1 + size_s2 + 1) * sizeof(char));
 
