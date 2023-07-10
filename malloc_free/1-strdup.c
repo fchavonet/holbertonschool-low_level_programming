@@ -27,7 +27,7 @@ char *_strdup(char *str)
 		size++;
 	}
 
-	array = malloc(size * sizeof(str));
+	array = malloc((size + 1) * sizeof(str));
 
 	if (array == NULL)
 	{
@@ -41,34 +41,4 @@ char *_strdup(char *str)
 
 	return (array);
 }
-
-/*
-   char *array = NULL;
-   int index_str = 0;
-   int index_array = 0;
-
-   array = malloc(sizeof(str));
-
-   while (str[index_str] != '\0')
-   {
-   index_str++;
-   index_array++;
-   }
-
-   if (array == NULL)
-   {
-   return (NULL);
-   }
-
-   index_str = 0;
-   while (str[index_str] != '\0')
-   {
-   array[index_str] = str[index_str];
-   index_str++;
-   }
-
-   return (array);
-   }
-
-*/
 
