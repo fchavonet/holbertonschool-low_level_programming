@@ -20,15 +20,15 @@ char *_strdup(char *str)
 
 	array = malloc(sizeof(str));
 
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-
 	while (str[index_str] != '\0')
 	{
 		index_str++;
 		index_array++;
+	}
+
+	if (array == NULL)
+	{
+		return (NULL);
 	}
 
 	index_str = 0;
