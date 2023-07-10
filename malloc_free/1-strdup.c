@@ -13,7 +13,34 @@
 
 char *_strdup(char *str)
 {
+	char *array = NULL;
+	int index = 0;
+	int size = 0;
 
+	while (str[size] != '\0')
+	{
+		size++;
+	}
+
+	if (size == 0)
+	{
+		return (NULL);
+	}
+
+	if (size != 0)
+	{
+		array = malloc(size * sizeof(str));
+
+		for (index = 0; index < size; index++)
+			{
+				array[index] = str[index];
+			}
+	}
+
+	return (array);
+}
+
+/*
 	char *array = NULL;
 	int index_str = 0;
 	int index_array = 0;
@@ -40,3 +67,6 @@ char *_strdup(char *str)
 
 	return (array);
 }
+
+*/
+
