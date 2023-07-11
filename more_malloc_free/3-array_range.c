@@ -4,11 +4,12 @@
 #include "main.h"
 
 /**
- * array_range - 
- * @min:
- * @max:
+ * array_range - creates an array of integers
  *
- * Return:
+ * @min: minimum values
+ * @max: maximum values
+ *
+ * Return: the pointer to the newly created array
  */
 
 int *array_range(int min, int max)
@@ -16,7 +17,6 @@ int *array_range(int min, int max)
 
 	int *array = NULL;
 	int index = 0;
-	int n = 0;
 
 	if (min > max)
 	{
@@ -30,10 +30,11 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	for (index = min; index < max; index++)
+	while (min < max)
 	{
-		n = index;
-		array[index] = n;
+		array[index] = min;
+		index++;
+		min++;
 	}
 
 	return (array);
