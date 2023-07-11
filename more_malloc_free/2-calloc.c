@@ -4,12 +4,12 @@
 #include "main.h"
 
 /**
- * _calloc -
+ * _calloc - allocates memory to an array
  *
- * @nmemb:
- * @size:
+ * @nmemb: number of elements
+ * @size: size of elements
  *
- * Return:
+ * Return: the array
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
