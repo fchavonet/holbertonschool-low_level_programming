@@ -30,7 +30,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	for (index = 0; index < max; index++)
+	for (index = min; index < max; index++)
 	{
 		n = index;
 		array[index] = n;
