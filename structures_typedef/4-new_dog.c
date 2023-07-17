@@ -5,65 +5,55 @@
 #include "dog.h"
 
 /**
- * new_dog - 
+ * new_dog - the new dog struct
  *
- * @name:
- * @age:
- * @owner:
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  *
- * Return:
+ * Return: ptr_dog (the new dog)
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 
-	dog_t *dog;
+	dog_t *ptr_dog;
 	int size_name = 0;
 	int size_owner = 0;
 
-	dog = malloc(sizeof(dog_t));
+	ptr_dog = malloc(sizeof(dog_t));
 
-	if (dog == NULL)
-	{
-		return(NULL);
-	}
+	/* name part */
 
-	/* malloc and copy of name */
+	if (ptr_dog == NULL)
+		return (NULL);
 
-	while(name[size_name] != '\0')
-	{
+	while (name[size_name] != '\0')
 		size_name++;
-	}
 
-	dog->name = malloc(sizeof(char) * (size_name + 1));
+	ptr_dog->name = malloc(sizeof(char) * (size_name + 1));
 
-	if (dog->name == NULL)
-	{
-		free(dog);
-		return(NULL);
-	}
+	if (ptr_dog->name == NULL)
+		free(ptr_dog);
+		return (NULL);
 
-	strcpy(dog->name, name);
+	strcpy(ptr_dog->name, name);
 
-	/* malloc and copy of owner */
+	/* owner part */
 
-	while(owner[size_owner] != '\0')
-	{
+	while (owner[size_owner] != '\0')
 		size_owner++;
-	}
 
-	dog->owner = malloc(sizeof(char) * (size_owner + 1));
+	ptr_dog->owner = malloc(sizeof(char) * (size_owner + 1));
 
-	if (dog->owner == NULL)
-	{
-		free(dog->name);
-		free(dog);
-		return(NULL);
-	}
+	if (ptr_dog->owner == NULL)
+		free(ptr_dog->name);
+		free(ptr_dog);
+		return (NULL);
 
-	strcpy(dog->owner, owner);
+	strcpy(ptr_dog->owner, owner);
 
-	dog->age = age;
+	ptr_dog->age = age;
 
-	return (dog);
+	return (ptr_dog);
 }
