@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "fonction_pointers.h"
+#include "function_pointers.h"
 
 /**
  * array_iterator - executes a function given as a
@@ -15,10 +15,10 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int index_array = 0;
+	size_t index_array = 0;
 
 	for (; index_array < size ; index_array++)
 	{
-		action(array[index_array);
+		action(array[index_array]);
 	}
 }
