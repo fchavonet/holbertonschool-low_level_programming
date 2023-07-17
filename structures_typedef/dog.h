@@ -2,16 +2,15 @@
 #define DOG_H
 
 /**
- * struct dog - information about a dog
+ * struct dog - metadatas about a dog
  *
  * @name: the name of the dog
  * @age: the age of the dog
  * @owner: the owner of the dog
  *
- * Description: variable with name, age and owner of a dog
  */
 
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
