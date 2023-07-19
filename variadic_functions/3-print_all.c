@@ -45,7 +45,7 @@ void print_string(va_list list)
 
 	if (string == NULL)
 	{
-		string = "nil";
+		string = "(nil)";
 	}
 	printf("%s", string);
 }
