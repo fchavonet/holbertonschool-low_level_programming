@@ -26,12 +26,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%d", num);
 		}
-
-		printf("%d", num);
-
-		if (index != n - 1)
+		else
 		{
-			printf("%s", separator);
+			printf("%d", num);
+
+			if (index != n - 1)
+			{
+				printf("%s", separator);
+			}
 		}
 	}
 	printf("\n");
