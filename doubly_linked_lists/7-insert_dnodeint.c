@@ -16,12 +16,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *after_new_node = NULL;
 	dlistint_t *new_node = NULL;
 
-	new_node = add_dnodeint(h, n);
+	new_node = malloc(sizeof(dlistint_t) * 1);
+	new_node->n = n;
+	new_node->prev = NULL;
+	new_node->next = NULL;
 	if (new_node == NULL)
 		return (NULL);
 
 	if (idx == 0)
-		return (new_node);
+		return (add_dnodeint(h, n));
 
 	if (*h != NULL)
 		before_new_node = *h;
