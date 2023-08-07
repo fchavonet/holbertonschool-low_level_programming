@@ -14,6 +14,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int file_descriptor = 0;
 	int bytes_written = 0;
+	int length = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -26,7 +27,13 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		text_content = "";
 
-	bytes_written = write(file_descriptor, text_content, strlen(text_content));
+	if (text_content != NULL)
+	{
+		while (text_content[length])
+			length++;
+	}
+
+	bytes_written = write(file_descriptor, text_content, length);
 
 	if (bytes_written == -1)
 	{
