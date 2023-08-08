@@ -13,7 +13,7 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long index = 0
+	unsigned long index = 0;
 	hash_node_t *new_node = NULL;
 	hash_node_t *temp = NULL;
 
