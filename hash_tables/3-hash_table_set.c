@@ -1,37 +1,37 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - function that adds an element to the hash table
+ * hash_table_set - Fonction qui ajoute un élément à la table de hachage
  *
- * @ht: is the hash table you want to add or update the key/value to
- * @key: is the key :)
- * @value: is the value associated with the key
+ * @ht: La table de hachage à laquelle vous souhaitez ajouter ou mettre à jour la clé/valeur
+ * @key: La clé :)
+ * @value: La valeur associée à la clé
  *
- * Return: 1 if it succeeded
- *         0 otherwise
+ * Retourne: 1 si cela a réussi
+ *           0 sinon
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long index = 0;
+	unsigned long int index = 0;
 	hash_node_t *new_node = NULL;
-	hash_node_t *temp = NULL;
+	hash_node_t *current_node = NULL;
 
 	if (ht == NULL || key == NULL)
 		return (0);
 
 	index = key_index((unsigned char *)key, ht->size);
-	temp = ht->array[index];
+	current_node = ht->array[index];
 
-	while (temp != NULL)
+	while (current_node != NULL)
 	{
-		if (strcmp(temp->key, key) == 0)
+		if (strcmp(current_node->key, key) == 0)
 		{
-			free(temp->value);
-			temp->value = strdup(value);
+			free(current_node->value);
+			current_node->value = strdup(value);
 			return (1);
 		}
-		temp = temp->next;
+		current_node = current_node->next;
 	}
 
 	new_node = malloc(sizeof(hash_node_t));
@@ -45,3 +45,4 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	return (1);
 }
+
